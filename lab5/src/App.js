@@ -10,7 +10,6 @@ import OpeningHoursPage from './Components/OpeningHoursPage/OpeningHoursPage.jsx
 
 function App() {
   return (
-<body>
 <Router>
 <div className="App">
   <Header></Header>
@@ -20,9 +19,8 @@ function App() {
       <Route path="/openinghours" element={<OpeningHoursPage/>}></Route>
   </Routes>
   </div>
-</Router>
 <Footer></Footer>
-</body>
+</Router>
   );
 }
 

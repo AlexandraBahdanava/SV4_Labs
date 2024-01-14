@@ -14,10 +14,34 @@ function Header() {
     return (
         <AppBar position="static">
             <Toolbar className='toolbar'>
+                <Drawer
+                    anchor="left"
+                    open={isMenuOpen}
+                    onClose={() => setIsMenuOpen(false)}
+                >
+                    <List>
+                        <ListItem component={RouterLink} to="/" onClick={() => setIsMenuOpen(false)}>
+                            <ListItemText primary="Главная" />
+                        </ListItem>
+                        <ListItem component={RouterLink} to="/master" onClick={() => setIsMenuOpen(false)}>
+                            <ListItemText primary="Мастера" />
+                        </ListItem>
+                        <ListItem component={RouterLink} to="/openinghours" onClick={() => setIsMenuOpen(false)}>
+                            <ListItemText primary="График работы" />
+                        </ListItem>
+                    </List>
+                </Drawer>
+                <IconButton
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    onClick={handleMenuToggle}
+                >
+                    <MenuIcon />
+                </IconButton>
                 <Typography variant="h6" style={{ flexGrow: 1 }} className='titleHeader'>
                 Учет работы мастеров маникюрного салона
                 </Typography>
-               
             </Toolbar>
         </AppBar>
     );

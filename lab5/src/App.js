@@ -1,10 +1,11 @@
  import './App.css';
-import { BrowserRouter as Route, Routes } from "react-router-dom"
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-import MainPage from './Components/MainPage/MainPage';
-import MastersPage from './Components/MastersPage/MastersPage';
-import OpeningHoursPage from './Components/OpeningHoursPage/OpeningHoursPage';
+ import React from 'react';
+ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from './Components/Header/Header.jsx';
+import Footer from './Components/Footer/Footer.jsx';
+import MainPage from './Components/MainPage/MainPage.jsx';
+import MastersPage from './Components/MastersPage/MastersPage.jsx';
+import OpeningHoursPage from './Components/OpeningHoursPage/OpeningHoursPage.jsx';
 
 function App() {
   return (

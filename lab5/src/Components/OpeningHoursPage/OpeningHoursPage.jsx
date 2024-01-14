@@ -35,7 +35,7 @@ function OpeningHoursPage() {
     Воскресенье: Выходной
   </Typography>
         
-            <Paper style={{ padding: '20px', marginTop: '20px' }}>
+            <Paper style={{ padding: '20px', marginTop: '20px',  color: 'rgba(229, 124, 157, 0.852)' }}>
                 <Typography variant="h4" component="h2" gutterBottom>
                     Работы наших мастеров
                 </Typography>

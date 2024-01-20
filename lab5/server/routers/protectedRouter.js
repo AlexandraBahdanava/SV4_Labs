@@ -1,18 +1,16 @@
 const { Router } = require("express");
-/*
-const companyInfoController = require("../controllers/companyinfoController");
-const orderStatusController = require("../controllers/orderstatusController");
-const orderController = require("../controllers/orderController");
-*/
+const userController = require("../controllers/userController");
+const recordController = require("../controllers/recordController");
+const adminController = require("../controllers/adminController");
 
 const router = new Router();
 
-/*router.get("/companies-info", companyInfoController.getAllCompanies);
-router.get("/order-statuses", orderStatusController.getAllOrderStatuses);
+router.get("/user", userController.idRead);
+router.get("/admin", adminController.idRead);
 
-router.post("/create-order", orderController.createOrder);
-router.get("/orders", orderController.getAllOrders);
-router.put("/order/update/:id", orderController.updateOrder);
-router.delete("/order/delete/:id", orderController.deleteOrder);*/
+router.post("/record/create", recordController.create);
+router.put("/user/update/", userController.update);
+router.put("/admin/update/", adminController.update);
+router.delete("/record/delete/", recordController.delete);
 
 module.exports = router;

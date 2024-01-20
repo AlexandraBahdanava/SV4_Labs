@@ -1,14 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { ordersReducer } from './slices/order';
-import { companyInfoReducer } from './slices/companyinfo';
-import { orderStatusReducer } from './slices/orderstatus';
+import { createStore } from 'redux';
 
-const store = configureStore({
-    reducer: {
-        orders: ordersReducer,
-        companyInfos: companyInfoReducer,
-        orderStatuses: orderStatusReducer,
-    }
-});
+const store = configureStore(reducer);
 
 export default store;

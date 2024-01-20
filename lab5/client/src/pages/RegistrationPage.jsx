@@ -39,16 +39,19 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   registerLink: {
+    width:'60%',
     marginTop: '10px',
     display: 'inline-block',
-    padding: '0.5rem 1rem',
-    backgroundColor: '#CCCCCC',
-    color: '#000000',
+    padding: '0.5rem 0',
+    backgroundColor: 'rgba(229, 124, 157, 0.852)',
+    color: 'white',
     borderRadius: '7px',
     textDecoration: 'none',
-    border: '1px solid #000000',
-    '&:hover': {
+    textAlign: 'center',
+   '&:hover': {
       textDecoration: 'none',
+      cursor: 'pointer',
+      backgroundColor: ' rgba(209, 79, 121, 0.852)',
     },
   },
 }));
@@ -67,6 +70,10 @@ const RegistrationPage = () => {
       return;
     }
     setAlertOpenError(false);
+  };
+  
+  const canselReqistration = () => {
+    navigate("/login"); 
   };
   
   const handleRegister = async (e) => {
@@ -153,6 +160,13 @@ const RegistrationPage = () => {
           onClick={handleRegister}
         >
           Готово
+        </Button>
+        <Button
+          className={classes.registerLink}
+          variant="contained"
+          onClick={canselReqistration}
+        >
+          Отмена
         </Button>
       </form>
       <Snackbar

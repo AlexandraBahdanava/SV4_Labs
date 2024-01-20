@@ -6,15 +6,15 @@ const Admin = sequelize.define(
     {
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     features: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     image: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     experience: {
       type: DataTypes.TEXT,
@@ -36,8 +36,8 @@ const User = sequelize.define(
     "User",
     {
     name: {
-      type: DataTypes.DATE,
-      allowNull: false
+      type: DataTypes.TEXT,
+      allowNull: true
     },
     email: {
         type: DataTypes.TEXT,
@@ -55,7 +55,7 @@ const User = sequelize.define(
     {
     title: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
       defaultValue: "Без названия"
     },
     status: {
@@ -63,8 +63,8 @@ const User = sequelize.define(
       allowNull: true
     },
     creation_date: {
-      type: DataTypes.TEXT,
-      allowNull: false
+      type: DataTypes.DATE,
+      allowNull: true
     },
   });
 

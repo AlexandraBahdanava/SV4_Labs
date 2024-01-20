@@ -9,6 +9,13 @@ function MastersPage(){
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [editingMaster, setEditingMaster] = useState(null);
 
+    useEffect(() => {
+        fetch('/data/masterData.json')
+            .then(response => response.json())
+            .then(data => setMasters(data))
+            .catch(error => console.error("Ошибка при загрузке сервисов:", error));
+    }, []);
+
     const addOrUpdateMaster = (masterData, id) => {
         if (id) {
             setMasters(prevMasters =>

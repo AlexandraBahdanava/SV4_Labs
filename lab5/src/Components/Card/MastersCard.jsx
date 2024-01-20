@@ -16,11 +16,6 @@ function MastersCard({ master, isSelected, toggleSelect }) {
         setIsPopoutOpen(!isPopoutOpen);
     };
 
-
-    const cardMediaStyle = {
-        height: 140, // Высота изображения в карточке
-    };
-
     return (
         <>
             <Card 
@@ -35,6 +30,9 @@ function MastersCard({ master, isSelected, toggleSelect }) {
                     component="img"
                     image={master.image}
                     alt={master.name}
+                    style={{
+                        height: '300px',
+                    }}
                 />
                 <CardContent style={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="div">

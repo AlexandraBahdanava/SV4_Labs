@@ -1,0 +1,17 @@
+.text{
+    color: aliceblue;   
+    width: 100%;
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.grid{
+    width: 100%;
+    background-color:  rgba(229, 124, 157, 0.852);
+    padding: 20px;
+    margin-top: 20px;
+}

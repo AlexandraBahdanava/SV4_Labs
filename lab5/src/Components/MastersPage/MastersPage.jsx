@@ -3,14 +3,18 @@ import MastersCard from '../Card/MastersCard';
 import CardForm from '../CardForm/CardForm';
 import { Container, Grid, Button, Typography } from '@mui/material';
 import SearchBar from '../SearchBar/SearchBar';
+import ExperienceSlider from '../ExperienceSlider/ExperienceSlider';
+import SpecializationDropdown from '../SpecializationDropdown/SpecializationDropdown';
 
 function MastersPage() {
     const [masters, setMasters] = useState([]);
-    const [selectedIds, setSelectedIds] = useState(new Set());
-    const [isFormOpen, setIsFormOpen] = useState(false);
-    const [editingMaster, setEditingMaster] = useState(null);
-    const [filteredMasters, setFilteredMasters] = useState([]);
-    const [isSearchPerformed, setIsSearchPerformed] = useState(false);
+  const [selectedIds, setSelectedIds] = useState(new Set());
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [editingMaster, setEditingMaster] = useState(null);
+  const [filteredMasters, setFilteredMasters] = useState([]);
+  const [isSearchPerformed, setIsSearchPerformed] = useState(false);
+  const [experienceFilter, setExperienceFilter] = useState([0, 10]);
+  const [selectedSpecialization, setSelectedSpecialization] = useState('');
 
     useEffect(() => {
         fetch('/data/masterData.json')
@@ -19,13 +23,36 @@ function MastersPage() {
             .catch(error => console.error("Ошибка при загрузке мастеров:", error));
     }, []);
 
+    const handleSpecializationChange = (value) => {
+        setSelectedSpecialization(value);
+    };
+  
     const handleSearch = (query) => {
         const filteredMasters = masters.filter(master =>
-            master.name.toLowerCase().includes(query.toLowerCase())
+            master.name.toLowerCase().includes(query.toLowerCase()) &&
+            (selectedSpecialization === '' || master.features.some(feature => feature.toLowerCase() === selectedSpecialization.toLowerCase())) &&
+            master.experience >= experienceFilter[0] && master.experience <= experienceFilter[1]
         );
         setFilteredMasters(filteredMasters);
         setIsSearchPerformed(true);
     };
+
+    const handleApplySpecializationFilter = () => {
+        // Выполните здесь обновление результатов поиска, учитывая выбранную специализацию
+        handleSearch(''); // Передайте пустой запрос, чтобы снова выполнить поиск с учетом специализации
+    };
+
+    const handleExperienceFilterChange = (value) => {
+        setExperienceFilter(value);
+        filterMastersByExperience(value);
+      };
+
+    const filterMastersByExperience = (value) => {
+        const filteredMasters = masters.filter(master =>
+          master.experience >= value[0] && master.experience <= value[1]
+        );
+        setFilteredMasters(filteredMasters);
+      };
 
     const addOrUpdateMaster = (masterData, id) => {
         if (id) {
@@ -93,6 +120,12 @@ function MastersPage() {
             </Grid>
 
             <SearchBar onSearch={handleSearch} />
+            <ExperienceSlider onFilterChange={handleExperienceFilterChange} />
+             <SpecializationDropdown
+                selectedSpecialization={selectedSpecialization}
+                onSpecializationChange={handleSpecializationChange}
+                onApplyClick={handleApplySpecializationFilter}
+            />
 
             {isSearchPerformed ? (
                 filteredMasters.length === 0 ? (

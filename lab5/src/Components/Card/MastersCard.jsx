@@ -16,6 +16,16 @@ function MastersCard({ master, isSelected, toggleSelect }) {
         setIsPopoutOpen(!isPopoutOpen);
     };
 
+    function formatYears(number) {
+        if (number === 1) {
+          return '1 год';
+        } else if (number >= 2 && number <= 4) {
+          return `${number} года`;
+        } else {
+          return `${number} лет`;
+        }
+      }
+
     return (
         <>
             <Card 
@@ -39,7 +49,7 @@ function MastersCard({ master, isSelected, toggleSelect }) {
                         {master.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        {master.experience}
+                        {formatYears(master.experience)}
                     </Typography>
                 </CardContent>
                 <CardActions>

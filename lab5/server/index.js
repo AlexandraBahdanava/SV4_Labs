@@ -5,7 +5,7 @@ const models = require('./models/models')
 const router = require('./routers/index')
 
 const cors = require("cors");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 

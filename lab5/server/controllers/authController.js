@@ -10,7 +10,6 @@ class AuthController {
             const user = await User.findOne({ where: { email: email } });
             const admin = await Admin.findOne({ where: { email: email } });
 
-
             console.log('User:', user);
             console.log('Admin:', admin);
 

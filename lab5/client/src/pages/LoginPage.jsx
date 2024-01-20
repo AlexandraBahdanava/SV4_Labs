@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { TextField, Button, Checkbox,  FormControlLabel, Typography} from '@material-ui/core';
 import { Link } from "react-router-dom";
 import { login } from '../api/authApi';
+import Footer from '../Components/Footer/Footer';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -11,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     height: '100vh',
     width: '100vw',
-    backgroundColor: '#d6d2e3',
     backgroundSize: 'cover',
   },
   form: {
@@ -29,25 +29,27 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     width:'60%',
-    backgroundColor: '#FED84C',
+    backgroundColor: 'rgba(229, 124, 157, 0.852)',
     color: 'white',
     borderRadius: '7px',
     '&:hover': {
-      backgroundColor: '#FED84C',
+      backgroundColor: ' rgba(209, 79, 121, 0.852)',
     },
   },
   registerLink: {
+    width:'60%',
     marginTop: '10px',
     display: 'inline-block',
-    padding: '0.5rem 1rem',
-    backgroundColor: '#CCCCCC',
-    color: '#000000',
+    padding: '0.5rem 0',
+    backgroundColor: 'rgba(229, 124, 157, 0.852)',
+    color: 'white',
     borderRadius: '7px',
     textDecoration: 'none',
-    border: '1px solid #000000',
+    textAlign: 'center',
    '&:hover': {
       textDecoration: 'none',
       cursor: 'pointer',
+      backgroundColor: ' rgba(209, 79, 121, 0.852)',
     },
   },
 }));
@@ -85,10 +87,11 @@ const LoginPage = () => {
   };
 
   return (
+    <>
     <div className={classes.formContainer}>
       <form className={classes.form}>
       <Typography variant="h4" align="center" style={{ height: '3vh', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-        Produce Tracking
+       Работа мастеров маникюра
       </Typography>
         <TextField
           className={classes.input}
@@ -119,6 +122,8 @@ const LoginPage = () => {
         </Link>
       </form>
     </div>
+      <Footer/>
+      </>
   );
 };
 

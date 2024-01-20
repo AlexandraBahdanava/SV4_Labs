@@ -5,6 +5,7 @@ import { registerUser } from '../api/authApi';
 import { useNavigate } from "react-router-dom";
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
+import Footer from '../Components/Footer/Footer';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -13,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     height: '100vh',
     width: '100vw',
-    backgroundColor: '#d6d2e3',
     backgroundSize: 'cover',
   },
   form: {
@@ -31,11 +31,11 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     width:'60%',
-    backgroundColor: '#FED84C',
+    backgroundColor: 'rgba(229, 124, 157, 0.852)',
     color: 'white',
     borderRadius: '7px',
     '&:hover': {
-      backgroundColor: '#FED84C',
+      backgroundColor: ' rgba(209, 79, 121, 0.852)',
     },
   },
   registerLink: {
@@ -114,10 +114,11 @@ const RegistrationPage = () => {
   };
 
   return (
+    <>
     <div className={classes.formContainer}>
       <form className={classes.form}>
         <Typography variant="h4" align="center" style={{ height: '3vh', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-          Produce Tracking
+        Работа мастеров маникюра
         </Typography>
         <TextField
           className={classes.input}
@@ -167,7 +168,10 @@ const RegistrationPage = () => {
         Данный Емейл уже зарегистрирован!
       </Alert>
     </Snackbar>
+   
     </div>
+     <Footer/>
+     </>
   );
 };
 

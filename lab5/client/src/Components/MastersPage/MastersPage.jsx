@@ -16,6 +16,15 @@ function MastersPage() {
   const [experienceFilter, setExperienceFilter] = useState([0, 10]);
   const [selectedSpecialization, setSelectedSpecialization] = useState('');
 
+  const [role, setRole] = useState(localStorage.getItem("role"));
+
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    window.location.reload();
+  };
+
     useEffect(() => {
         fetch('/data/masterData.json')
             .then(response => response.json())
@@ -102,6 +111,7 @@ function MastersPage() {
 
     return (
         <Container maxWidth="lg">
+            {role ==='admin' && (
             <Grid container spacing={2} style={{ marginBottom: '20px', justifyContent: 'center' }}>
                 <Grid item>
                     <Button variant="contained" style={{ backgroundColor: 'rgb(187, 87, 118)' }} onClick={handleAddClick}>
@@ -119,6 +129,7 @@ function MastersPage() {
                     </Button>
                 </Grid>
             </Grid>
+)}
 
             <SearchBar onSearch={handleSearch} />
             <ExperienceSlider onFilterChange={handleExperienceFilterChange} />

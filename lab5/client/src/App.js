@@ -10,7 +10,7 @@ import { publicRoutes } from "./router/publicRoutes";
 import { LOGIN_ROUTE } from "./utils/consts";
 
 function App() { 
-  const [token, setToken] = useState(localStorage.getItem("token"));
+  const token = localStorage.getItem("token");
 
   if (!token) {
     return (

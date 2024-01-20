@@ -39,9 +39,6 @@ function SpecializationDropdown({ selectedSpecialization, onSpecializationChange
                     ))}
                 </Select>
             </FormControl>
-            <Button variant="contained" onClick={handleApplyClick}>
-                {buttonClicked ? 'Применено' : 'Применить'}
-            </Button>
         </div>
     );
 }

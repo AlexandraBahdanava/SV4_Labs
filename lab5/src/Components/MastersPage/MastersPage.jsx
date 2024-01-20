@@ -29,13 +29,14 @@ function MastersPage() {
   
     const handleSearch = (query) => {
         const filteredMasters = masters.filter(master =>
-            master.name.toLowerCase().includes(query.toLowerCase()) &&
+            (query === '' || master.name.toLowerCase().includes(query.toLowerCase())) &&
             (selectedSpecialization === '' || master.features.some(feature => feature.toLowerCase() === selectedSpecialization.toLowerCase())) &&
             master.experience >= experienceFilter[0] && master.experience <= experienceFilter[1]
         );
         setFilteredMasters(filteredMasters);
         setIsSearchPerformed(true);
     };
+    
 
     const handleApplySpecializationFilter = () => {
         // Выполните здесь обновление результатов поиска, учитывая выбранную специализацию

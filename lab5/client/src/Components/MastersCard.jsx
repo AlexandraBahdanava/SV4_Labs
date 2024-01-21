@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardMedia, Typography, Button, CardActions } from '@mui/material';
-import Popout from '../PopoutWindow/Popout';
+import Popout from './PopoutWindow/Popout';
 
 function MastersCard({ master, isSelected, toggleSelect }) {
     const [isPopoutOpen, setIsPopoutOpen] = useState(false);

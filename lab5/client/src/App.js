@@ -4,12 +4,12 @@
 import Header from './Components/Header/Header.jsx';
 import Footer from './Components/Footer/Footer.jsx';
 import MainPage from './Components/MainPage/MainPage.jsx';
-import MastersPage from './Components/MastersPage/MastersPage.jsx';
-import OpeningHoursPage from './Components/OpeningHoursPage/OpeningHoursPage.jsx';
+import MastersPage from './Components/MastersPage.jsx';
+import OpeningHoursPage from './Components/OpeningHoursPage.jsx';
 import { publicRoutes } from "./router/publicRoutes";
 import { LOGIN_ROUTE } from "./utils/consts";
-import AppointmentForm from './Components/AppointmentForm/AppointmentForm.jsx';
-import RecordForm from './Components/RecordForm/RecordForm.jsx';
+import AppointmentForm from './Components/AppointmentForm.jsx';
+import RecordForm from './Components/RecordForm.jsx';
 
 function App() { 
   const token = localStorage.getItem("token");

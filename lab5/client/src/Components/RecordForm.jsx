@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAll } from '../../api/recordApi';
+import { getAll } from '../api/recordApi';
 
 const RecordForm = () => {
   const [userRecords, setUserRecords] = useState([]);

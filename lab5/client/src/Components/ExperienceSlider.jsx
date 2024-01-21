@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ExperienceFilter from '../ExperienceFilter/ExperienceFilter';
+import ExperienceFilter from './ExperienceFilter';
 
 const ExperienceSlider = ({ onFilterChange }) => {
   const [experience, setExperience] = useState([0, 10]); // Измените диапазон по своему усмотрению

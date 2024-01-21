@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import MastersCard from '../Card/MastersCard';
-import CardForm from '../CardForm/CardForm';
+import MastersCard from './MastersCard';
+import CardForm from './CardForm/CardForm';
 import { Container, Grid, Button, Typography } from '@mui/material';
-import SearchBar from '../SearchBar/SearchBar';
-import ExperienceSlider from '../ExperienceSlider/ExperienceSlider';
-import SpecializationDropdown from '../SpecializationDropdown/SpecializationDropdown';
+import SearchBar from './SearchBar/SearchBar';
+import ExperienceSlider from './ExperienceSlider';
+import SpecializationDropdown from './SpecializationDropdown';
 
 function MastersPage() {
     const [masters, setMasters] = useState([]);
@@ -17,7 +17,6 @@ function MastersPage() {
   const [selectedSpecialization, setSelectedSpecialization] = useState('');
 
   const [role, setRole] = useState(localStorage.getItem("role"));
-
 
   const handleLogout = () => {
     localStorage.removeItem("token");

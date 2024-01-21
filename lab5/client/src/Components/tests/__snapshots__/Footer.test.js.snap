@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`get GitHub link 1`] = `
+<a
+  class="link"
+  href="https://github.com/AlexandraBahdanava"
+>
+  GitHub
+</a>
+`;
+
+exports[`get current year 1`] = `
+<h6
+  class="MuiTypography-root MuiTypography-h6 text css-2ulfj5-MuiTypography-root"
+>
+  <a
+    class="link"
+    href="https://github.com/AlexandraBahdanava"
+  >
+    GitHub
+  </a>
+  , 2024
+</h6>
+`;

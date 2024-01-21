@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MastersPage matches the snapshot 1`] = `
+<div
+  className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+>
+  <div
+    className="MuiBox-root css-mbx0dj"
+  >
+    <div
+      className="MuiFormControl-root MuiTextField-root box css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+    >
+      <div
+        className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+          disabled={false}
+          id=":r0:"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Введите имя мастера"
+          required={false}
+          type="text"
+          value=""
+        />
+        <fieldset
+          aria-hidden={true}
+          className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            className="css-ihdtdm"
+          >
+            <span
+              className="notranslate"
+            >
+              ​
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium buttonSearch css-sghohy-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      Поиск
+    </button>
+  </div>
+  <div>
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+      id="experience-slider"
+    >
+      Опыт работы (нажмите кнопку "Поиск" и начните перемещать ползунок):
+    </p>
+    <span
+      className="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeMedium css-187mznn-MuiSlider-root"
+      onMouseDown={[Function]}
+    >
+      <span
+        className="MuiSlider-rail css-14pt78w-MuiSlider-rail"
+      />
+      <span
+        className="MuiSlider-track css-1gv0vcd-MuiSlider-track"
+        style={
+          Object {
+            "left": "0%",
+            "width": "100%",
+          }
+        }
+      />
+      <span
+        className="MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorPrimary css-jx1sa5-MuiSlider-thumb"
+        data-index={0}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "left": "0%",
+            "pointerEvents": undefined,
+          }
+        }
+      >
+        <input
+          aria-labelledby="experience-slider"
+          aria-orientation="horizontal"
+          aria-valuemax={10}
+          aria-valuemin={0}
+          aria-valuenow={0}
+          data-index={0}
+          disabled={false}
+          max={10}
+          min={0}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          step={1}
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "direction": "ltr",
+              "height": "100%",
+              "margin": -1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "100%",
+            }
+          }
+          type="range"
+          value={0}
+        />
+        <span
+          aria-hidden={true}
+          className="MuiSlider-valueLabel css-7d61z1-MuiSlider-valueLabel"
+        >
+          <span
+            className="MuiSlider-valueLabelCircle"
+          >
+            <span
+              className="MuiSlider-valueLabelLabel"
+            >
+              0
+            </span>
+          </span>
+        </span>
+      </span>
+      <span
+        className="MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorPrimary css-jx1sa5-MuiSlider-thumb"
+        data-index={1}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "left": "100%",
+            "pointerEvents": undefined,
+          }
+        }
+      >
+        <input
+          aria-labelledby="experience-slider"
+          aria-orientation="horizontal"
+          aria-valuemax={10}
+          aria-valuemin={0}
+          aria-valuenow={10}
+          data-index={1}
+          disabled={false}
+          max={10}
+          min={0}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          step={1}
+          style={
+            Object {
+              "border": 0,
+              "clip": "rect(0 0 0 0)",
+              "direction": "ltr",
+              "height": "100%",
+              "margin": -1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "whiteSpace": "nowrap",
+              "width": "100%",
+            }
+          }
+          type="range"
+          value={10}
+        />
+        <span
+          aria-hidden={true}
+          className="MuiSlider-valueLabel css-7d61z1-MuiSlider-valueLabel"
+        >
+          <span
+            className="MuiSlider-valueLabelCircle"
+          >
+            <span
+              className="MuiSlider-valueLabelLabel"
+            >
+              10
+            </span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+  <div>
+    <div
+      className="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      style={
+        Object {
+          "marginRight": 10,
+          "minWidth": 200,
+        }
+      }
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink={false}
+        id="specialization-label"
+      >
+        Специализация
+      </label>
+      <div
+        className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        onClick={[Function]}
+      >
+        <div
+          aria-controls=":r1:"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-labelledby="specialization-label specialization-select"
+          className="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          id="specialization-select"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          role="combobox"
+          tabIndex={0}
+        >
+          <span
+            className="notranslate"
+          >
+            ​
+          </span>
+        </div>
+        <input
+          aria-hidden={true}
+          aria-invalid={false}
+          className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          disabled={false}
+          onAnimationStart={[Function]}
+          onChange={[Function]}
+          required={false}
+          tabIndex={-1}
+          value=""
+        />
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+          data-testid="ArrowDropDownIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+        <fieldset
+          aria-hidden={true}
+          className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            className="css-yjsfm1"
+          >
+            <span>
+              Специализация
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+  />
+</div>
+`;

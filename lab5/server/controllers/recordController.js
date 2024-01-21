@@ -2,15 +2,25 @@ const { Record } = require("../models/models");
 
 class RecordController {
 
-  async create(req, res) {
-    try {
-      const record = await Record.create(req.body);
-      return res.status(201).json(record);
-    } catch (error) {
-      console.error(error);
-      return res.status(500).json({ error: "Internal Server Error" });
-    }
-  };
+    async create(req, res) {
+        try {
+          // Деструктурируем данные из запроса
+          const { recordDate, authorName, ...otherFields } = req.body;
+      
+          // Создаем запись, устанавливая поля creation_date и title
+          const record = await Record.create({
+            creation_date: recordDate, // Дата записи в поле creation_date
+            title: authorName, // Имя автора в поле title
+            ...otherFields, // Остальные поля из запроса
+          });
+      
+          return res.status(201).json(record);
+        } catch (error) {
+          console.error(error);
+          return res.status(500).json({ error: "Internal Server Error" });
+        }
+      }
+      
   
   async readAll(req, res) {
     try {

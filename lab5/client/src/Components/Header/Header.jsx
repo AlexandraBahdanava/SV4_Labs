@@ -29,6 +29,12 @@ function Header() {
                         <ListItem component={RouterLink} to="/openinghours" onClick={() => setIsMenuOpen(false)}>
                             <ListItemText primary="График работы" />
                         </ListItem>
+                        <ListItem component={RouterLink} to="/appointmentform" onClick={() => setIsMenuOpen(false)}>
+                            <ListItemText primary="Записаться" />
+                        </ListItem>
+                        <ListItem component={RouterLink} to="/record" onClick={() => setIsMenuOpen(false)}>
+                            <ListItemText primary="Мои записи" />
+                        </ListItem>
                     </List>
                 </Drawer>
                 <IconButton

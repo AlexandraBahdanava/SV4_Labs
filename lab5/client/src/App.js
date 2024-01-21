@@ -8,6 +8,8 @@ import MastersPage from './Components/MastersPage/MastersPage.jsx';
 import OpeningHoursPage from './Components/OpeningHoursPage/OpeningHoursPage.jsx';
 import { publicRoutes } from "./router/publicRoutes";
 import { LOGIN_ROUTE } from "./utils/consts";
+import AppointmentForm from './Components/AppointmentForm/AppointmentForm.jsx';
+import RecordForm from './Components/RecordForm/RecordForm.jsx';
 
 function App() { 
   const token = localStorage.getItem("token");
@@ -31,8 +33,11 @@ function App() {
   <Header></Header>
   <Routes>
       <Route path="/" element ={<MainPage/>}></Route>
+      <Route path="/login" element ={<MainPage/>}></Route>
       <Route path="/master" element={<MastersPage/>}></Route>
       <Route path="/openinghours" element={<OpeningHoursPage/>}></Route>
+      <Route path="/appointmentform" element={<AppointmentForm/>}></Route>
+      <Route path="/record" element={<RecordForm/>}></Route>
   </Routes>
   </div>
 <Footer></Footer>

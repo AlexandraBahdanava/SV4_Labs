@@ -7,6 +7,7 @@ const router = new Router();
 
 router.get("/user", userController.idRead);
 router.get("/admin", adminController.idRead);
+router.get("/record", recordController.readAll);
 
 router.post("/record/create", recordController.create);
 router.put("/user/update/", userController.update);

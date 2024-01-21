@@ -10,7 +10,6 @@ class RecordController {
           // Создаем запись, устанавливая поля creation_date и title
           const record = await Record.create({
             creation_date: recordDate, // Дата записи в поле creation_date
-            title: authorName, // Имя автора в поле title
             ...otherFields, // Остальные поля из запроса
           });
       
